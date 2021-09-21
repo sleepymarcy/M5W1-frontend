@@ -25,7 +25,7 @@ export default class NewBlogPost extends Component {
                     category: this.state.category,
                     title: this.state.title,
                     cover:
-                        "https://coursereport-production.imgix.net/uploads/school/logo/1045/original/Strive_-_logosquareblack.png?w=200&h=200&dpr=1&q=75",
+                        "https://images4.alphacoders.com/100/thumb-350-1001996.png",
                     readTime: {
                         value: 5,
                         unit: "minute",

@@ -27,7 +27,7 @@ const Blog = ({ match }) => {
 
   const fetchPosts = async (id) => {
     try {
-      let response = await fetch(`http://localhost:3001/blogPosts/${id}`);
+      let response = await fetch(`http://localhost:3001/blogs/${id}`);
       let blogItem = await response.json();
       setBlog(blogItem);
       setLoading(false);
@@ -40,7 +40,7 @@ const Blog = ({ match }) => {
   const fetchComments = async (id) => {
     try {
       let response = await fetch(
-        `http://localhost:3001/blogPosts/${id}/comments`
+        `http://localhost:3001/blogs/${id}/comments`
       )
       let blogComments = await response.json();
       setComments(blogComments);
@@ -70,7 +70,7 @@ const Blog = ({ match }) => {
     const uploadCover = async (id) => {
       try {
         let response = await fetch(
-          `http://localhost:3001/blogPosts/${id}/uploadCover`,
+          `http://localhost:3001/blogs/${id}/uploadCover`,
           {
             method: "PUT",
             body: fileFormData,
